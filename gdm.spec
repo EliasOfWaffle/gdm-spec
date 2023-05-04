@@ -10,7 +10,7 @@
 
 Name:    gdm
 Epoch:   1
-Version: 44.1
+Version: 44.0
 Release: 1%{?dist}
 Summary: The GNOME Display Manager
 
