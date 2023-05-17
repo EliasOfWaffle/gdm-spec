@@ -7,11 +7,12 @@
 %define nss_version 3.11.1
 
 %global tarball_version %%(echo %{version} | tr '~' '.')
+%global toolchain clang
 
 Name:    gdm
 Epoch:   1
-Version: 44.0
-Release: 1%{?dist}
+Version: 44.1
+Release: 2%{?dist}
 Summary: The GNOME Display Manager
 
 License: GPL-2.0-or-later
@@ -31,6 +32,8 @@ Patch80001: 0001-Honor-initial-setup-being-disabled-by-distro-install.patch
 Patch90001: 0001-data-add-system-dconf-databases-to-gdm-profile.patch
 
 BuildRequires: accountsservice-devel
+BuildRequires: clang
+BuildRequires: llvm
 BuildRequires: audit-libs-devel >= %{libauditver}
 BuildRequires: dconf
 BuildRequires: desktop-file-utils >= %{desktop_file_utils_version}
